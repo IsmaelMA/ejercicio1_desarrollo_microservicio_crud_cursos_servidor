@@ -1,0 +1,1 @@
+CREATE SCHEMA `bd_cursos_cuarta_semana` DEFAULT CHARACTER SET utf16 ;
