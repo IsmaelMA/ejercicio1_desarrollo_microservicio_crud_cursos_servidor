@@ -46,4 +46,6 @@ public interface ICursoService {
      * @return la lista de cursos cuyo precio está dentro del rango
      */
     public List<Curso> cursosPorPrecio(int precioMinimo, int precioMaximo);
+
+    public List<Curso> listarTodosLosCursos();
 }

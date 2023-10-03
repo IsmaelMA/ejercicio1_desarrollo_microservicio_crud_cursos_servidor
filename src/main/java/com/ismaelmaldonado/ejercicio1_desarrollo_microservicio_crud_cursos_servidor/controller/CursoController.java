@@ -84,4 +84,9 @@ public class CursoController {
         return service.cursosPorPrecio(precioMinimo, precioMaximo);
     }
 
+    @GetMapping(value = "/cursos", produces = MediaType.APPLICATION_JSON_VALUE)
+    public List<Curso> getCursos() {
+        return service.listarTodosLosCursos();
+    }
+
 }

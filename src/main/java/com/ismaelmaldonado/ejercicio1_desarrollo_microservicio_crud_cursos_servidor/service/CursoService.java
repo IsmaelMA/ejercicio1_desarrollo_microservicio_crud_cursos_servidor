@@ -64,7 +64,7 @@ public class CursoService implements ICursoService {
      */
     @Override
     public Curso buscarCurso(String codCurso) {
-        return repository.findById(codCurso).get();
+        return repository.findById(codCurso).orElse(null);
     }
 
     /**
@@ -77,6 +77,11 @@ public class CursoService implements ICursoService {
     @Override
     public List<Curso> cursosPorPrecio(int precioMinimo, int precioMaximo) {
         return repository.findByPrecioBetween(precioMinimo, precioMaximo);
+    }
+
+    @Override
+    public List<Curso> listarTodosLosCursos() {
+        return repository.findAll();
     }
 
 }
